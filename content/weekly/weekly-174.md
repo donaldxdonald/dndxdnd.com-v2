@@ -1,6 +1,6 @@
 ---
 title: '#174: Claude Cowork, Cloudflare acquires Astro, Open Responses API…'
-date 2026-01-19 23:12
+date: 2026-01-19 23:12
 ---
 
 
