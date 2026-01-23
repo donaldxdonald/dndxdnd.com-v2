@@ -1,9 +1,7 @@
-import { DocData } from 'fumadocs-mdx'
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
 import defaultComponents from 'fumadocs-ui/mdx'
-import { ComponentProps } from 'react'
+import { MDXComponents } from 'mdx/types'
 
-type MDXComponents = ComponentProps<DocData['body']>['components']
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultComponents,
