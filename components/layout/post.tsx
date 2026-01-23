@@ -14,7 +14,7 @@ export default async function Post({ page }: {
 
   const { data } = page
   const MDXContent = page.data.body
-  const components = getMDXComponents()
+  const components = getMDXComponents() as any
 
   return (
     <section className="flex flex-col mt-6 md:mt-16 mb-56">
