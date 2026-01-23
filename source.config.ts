@@ -12,6 +12,9 @@ export const blog = defineDocs({
       date: z.any().optional(),
       image: z.string().optional(),
     }),
+    postprocess: {
+      extractLinkReferences: true,
+    },
   },
 })
 
@@ -24,6 +27,9 @@ export const weekly = defineDocs({
       date: z.any().optional(),
       image: z.string().optional(),
     }),
+    postprocess: {
+      extractLinkReferences: true,
+    },
   },
 })
 

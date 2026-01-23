@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import Post from '@/components/layout/post'
 import { blogSource } from '@/app/source'
 import { TOC } from '../../../../components/mdx/TOC'
@@ -59,7 +60,7 @@ export default async function PostPage(
   const postData = blogSource.getPage([params.slug])
 
   if (!postData) {
-    return null
+    return notFound()
   }
 
   return (

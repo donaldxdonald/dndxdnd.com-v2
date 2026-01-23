@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import Post from '@/components/layout/post'
 import { weeklySource } from '../../../source'
 
@@ -67,7 +68,7 @@ export default async function PostPage(
   const postData = weeklySource.getPage([fixSlug(params.slug)])
 
   if (!postData) {
-    return null
+    return notFound()
   }
 
   return <Post page={postData}></Post>

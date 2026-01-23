@@ -11,29 +11,12 @@ import {
   type SharedProps,
 } from 'fumadocs-ui/components/dialog/search'
 import { useDocsSearch } from 'fumadocs-core/search/client'
-import { create } from '@orama/orama'
 import { useI18n } from 'fumadocs-ui/contexts/i18n'
-import { createTokenizer } from '@orama/tokenizers/mandarin'
-import { stopwords } from '@orama/stopwords/mandarin'
-
-function initOrama() {
-  return create({
-    schema: { _: 'string' },
-    // https://docs.orama.com/docs/orama-js/supported-languages
-    components: {
-      tokenizer: createTokenizer({
-        language: 'mandarin',
-        stopWords: stopwords,
-      }),
-    },
-  })
-}
 
 export default function DefaultSearchDialog(props: SharedProps) {
   const { locale } = useI18n() // (optional) for i18n
   const { search, setSearch, query } = useDocsSearch({
-    type: 'static',
-    initOrama,
+    type: 'fetch',
     locale,
   })
 

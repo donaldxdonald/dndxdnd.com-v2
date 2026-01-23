@@ -1,5 +1,5 @@
 import { loader } from 'fumadocs-core/source'
-import { blog as blogCollection, weekly as weeklyCollection } from '@/.source'
+import { blog as blogCollection, weekly as weeklyCollection } from '@/.source/server'
 import type { InferPageType } from 'fumadocs-core/source'
 
 // Blog loader
