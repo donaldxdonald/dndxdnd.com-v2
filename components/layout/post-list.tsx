@@ -25,13 +25,11 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
         {
           groupedSortedList.map(([year, sortedList]) => (
             <div className="mt-3" key={year}>
-              <motion.h2
-                className="text-3xl md:/text-4xl opacity-75 font-bold tracking-tighter my-5 ml-2 md:ml-5"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <h2
+                className="text-3xl md:/text-4xl opacity-80 font-bold tracking-tighter my-5 ml-2 md:ml-5"
               >
                 {year}
-              </motion.h2>
+              </h2>
               <motion.ul>
                 {
                   sortedList.map(post => (
@@ -40,7 +38,7 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
                     >
                       <Link
                         href={post.url}
-                        className="group px-2 md:px-5 tracking-tight py-1.5 flex justify-between text-sm md:text-lg w-full rounded-md text-slate-600/60 hover:text-slate-600 "
+                        className="group px-2 md:px-5 tracking-tight py-1.5 flex justify-between text-sm md:text-base w-full rounded-md text-slate-600/60 hover:text-slate-600 "
                         prefetch={false}
                       >
                         <motion.span

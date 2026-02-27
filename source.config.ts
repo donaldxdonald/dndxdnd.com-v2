@@ -1,6 +1,7 @@
 import { defineDocs, frontmatterSchema, defineConfig } from 'fumadocs-mdx/config'
 import { z } from 'zod'
 import remarkGfm from 'remark-gfm'
+import { rehypeToc } from 'fumadocs-core/mdx-plugins'
 import { rehypeLinkNewWindow } from './lib/rehype'
 
 // Define blog collection
@@ -50,12 +51,10 @@ export default defineConfig({
       //   },
       // ],
       rehypeLinkNewWindow,
+      rehypeToc,
     ],
     rehypeCodeOptions: {
-      themes: {
-        light: 'rose-pine-moon',
-        dark: 'rose-pine-moon',
-      },
+      theme: 'rose-pine-moon',
       transformers: [
         {
           pre(node) {

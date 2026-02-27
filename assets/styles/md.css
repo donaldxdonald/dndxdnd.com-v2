@@ -50,7 +50,7 @@ h3 {
 }
 
 .prose pre > div {
-  @apply -mx-4 -mt-3 mb-4 px-4 py-2 bg-theme/50 text-white select-none;
+  @apply -mt-3.5 mb-4 px-4 py-3 bg-theme/60 text-white select-none;
 }
 
 .prose .header-anchor {

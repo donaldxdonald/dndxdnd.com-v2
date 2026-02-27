@@ -66,8 +66,8 @@ export default async function PostPage(
   return (
     <>
       <Post page={postData}></Post>
-      <div className="h-screen hidden fixed top-0 left-[50vw] translate-x-full lg:translate-x-[35vw] xl:translate-x-[30vw] 2xl:translate-x-112 lg:flex flex-col items-center px-2 py-28">
-        <TOC tableOfContents={[]} hrefPrefix={`/blog/${params.slug}`}></TOC>
+      <div className="h-screen hidden fixed top-0 left-[50vw] translate-x-full lg:translate-x-[35vw] xl:translate-x-[30vw] 2xl:translate-x-112 lg:flex flex-col items-center px-2 pt-20 pb-28">
+        <TOC tableOfContents={postData.data.toc}></TOC>
       </div>
     </>
   )
