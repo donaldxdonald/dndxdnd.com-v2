@@ -25,18 +25,34 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
         {
           groupedSortedList.map(([year, sortedList]) => (
             <div className="mt-3" key={year}>
-              <motion.h2 className="text-3xl md:/text-4xl opacity-75 font-bold tracking-tighter my-5 ml-2 md:ml-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>{year}</motion.h2>
+              <motion.h2
+                className="text-3xl md:/text-4xl opacity-75 font-bold tracking-tighter my-5 ml-2 md:ml-5"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+              >
+                {year}
+              </motion.h2>
               <motion.ul>
                 {
-                  sortedList.map((post, i) => (
-                    <motion.li key={post.url} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0, transition: { type: 'spring', delay: i * 0.02 } }}>
+                  sortedList.map(post => (
+                    <motion.li
+                      key={post.url}
+                    >
                       <Link
                         href={post.url}
-                        className="px-2 md:px-5 tracking-tight py-3 flex justify-between text-sm md:text-lg w-full rounded-md text-slate-600 hover:text-purple-800 hover:bg-purple-100"
+                        className="group px-2 md:px-5 tracking-tight py-1.5 flex justify-between text-sm md:text-lg w-full rounded-md text-slate-600/60 hover:text-slate-600 "
                         prefetch={false}
                       >
-                        <span className="flex-1 max-w-[80%] truncate">{ post.data.title }</span>
-                        <span className="text-xs md:text-sm text-gray-400 font-mono">{ format(post.data.date, 'yyyy-MM-dd') }</span>
+                        <motion.span
+                          className="flex-1 max-w-[80%] truncate"
+                          layoutId={post.data.title}
+                          layout="position"
+                          transition={{ layout: { type: 'spring', damping: 30, stiffness: 350 } }}
+
+                        >
+                          { post.data.title }
+                        </motion.span>
+                        <span className="text-xs md:text-sm text-gray-400/50 group-hover:text-gray-400 font-mono">{ format(post.data.date, 'yyyy-MM-dd') }</span>
                       </Link>
                     </motion.li>
                   ))

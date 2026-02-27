@@ -66,7 +66,7 @@ export default function ListeningPage() {
   }
 
   return (
-    <div className="w-5/6 mx-auto xl:w-full">
+    <div className="w-5/6 mx-auto xl:w-full select-none">
       <h1 className="text-4xl font-serif">Listening</h1>
       <div className="mt-16 mb-36">
         <motion.ul className="grid gap-2 md:gap-4" style={gridLayout} variants={containerVariants} initial="hidden" animate="visible">

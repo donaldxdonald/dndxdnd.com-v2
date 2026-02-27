@@ -33,11 +33,11 @@ h3 {
 }
 
 .prose :is(p, li) > a {
-  @apply border-b-theme border-b-2 hover:opacity-60 font-normal no-underline;
+  @apply hover:opacity-60 font-normal decoration-theme;
 }
 
 .prose ol li > a {
-  @apply border-dashed border-b-theme border-b-2 no-underline;
+  @apply decoration-theme;
 }
 
 .prose :is(ol, ul) li {
@@ -59,6 +59,10 @@ h3 {
 
 .prose :is(h1, h2, h3):hover .header-anchor {
   @apply opacity-50;
+}
+
+.prose :is(h1, h2, h3) a {
+  @apply no-underline;
 }
 
 .prose blockquote {

@@ -1,8 +1,8 @@
 import { format } from 'date-fns'
 import { Link } from 'next-view-transitions'
 import { notFound } from 'next/navigation'
-import Balancer from 'react-wrap-balancer'
 import { getMDXComponents } from '../mdx/mdx-components'
+import { PostTitle } from '../PostTitle'
 import type { BlogPost } from '@/app/source'
 
 export default async function Post({ page }: {
@@ -18,9 +18,7 @@ export default async function Post({ page }: {
 
   return (
     <section className="flex flex-col mt-6 md:mt-16 mb-56">
-      <h1 className="font-bold text-4xl font-serif tracking-tighter mt-5">
-        <Balancer>{data.title}</Balancer>
-      </h1>
+      <PostTitle postTitle={data.title}></PostTitle>
       <span className="text-md text-gray-400 my-3 py-2 border-t border-purple-900 w-fit font-mono">
         {format(data.date, 'yyyy-MM-dd HH:mm')}
         {' '}
