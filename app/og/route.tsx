@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
         tw="relative w-full h-full bg-white flex items-end bg-indigo-100 text-slate-800"
         style={{
           fontFamily: '"Noto Serif", ui-serif, system-ui, serif',
-          backgroundImage: 'url("https://donaldxdonald.xyz/noise.png")',
+          backgroundImage: 'url("https://www.dndxdnd.com/noise.png")',
         }}
       >
         <span tw="absolute left-10 top-6 text-xl">@donaldxdonald</span>

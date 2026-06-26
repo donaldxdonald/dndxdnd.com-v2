@@ -1,6 +1,5 @@
 import { remove } from 'diacritics'
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+export { cn } from 'cnfast'
 
 // string.js slugify drops non ascii chars so we have to
 // use a custom implementation here
@@ -26,12 +25,9 @@ export const slugify = (str: string): string => {
   )
 }
 
+// eslint-disable-next-line @stylistic/type-annotation-spacing
 export function groupBy<T>(arr: T[], predicate: (item: T) => string): Record<string, T[]> {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   return arr.reduce((r, v, i, a, k = predicate(v)) => ((r[k] || (r[k] = [])).push(v), r), {})
-}
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
 }

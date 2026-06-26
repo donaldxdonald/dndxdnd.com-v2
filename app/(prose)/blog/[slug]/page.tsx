@@ -23,8 +23,8 @@ export async function generateMetadata(
     image,
     date,
   } = postData.data
-  const url = `https://donaldxdonald.xyz/blog/${params.slug}`
-  const ogImage = image || `https://donaldxdonald.xyz/og?title=${encodeURIComponent(title)}&date=${encodeURIComponent(date)}`
+  const url = `https://www.dndxdnd.com/blog/${params.slug}`
+  const ogImage = image || `https://www.dndxdnd.com/og?title=${encodeURIComponent(title)}&date=${encodeURIComponent(date)}`
 
   return {
     title,

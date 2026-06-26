@@ -15,7 +15,7 @@ export default async function og() {
         tw="relative w-full h-full bg-white flex items-center justify-center bg-indigo-100 text-slate-800"
         style={{
           fontFamily: 'Jost',
-          backgroundImage: 'url("https://donaldxdonald.xyz/noise.png")',
+          backgroundImage: 'url("https://www.dndxdnd.com/noise.png")',
         }}
       >
         <span tw="absolute right-10 top-10 text-4xl">blog / weekly</span>

@@ -19,7 +19,7 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.9.0",
   "engineStrict": true,
   "dependencies": {
     "@fontsource/jost": "^5.2.8",
@@ -30,9 +30,8 @@
     "@orama/tokenizers": "^3.1.18",
     "@spotify/web-api-ts-sdk": "^1.2.0",
     "@vercel/analytics": "^1.6.1",
-    "classnames": "^2.5.1",
-    "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "cnfast": "^0.0.8",
     "date-fns": "^4.1.0",
     "es-toolkit": "^1.44.0",
     "feed": "^5.0.1",
@@ -57,7 +56,6 @@
     "sass": "^1.97.3",
     "sharp": "^0.34.5",
     "strip-markdown": "^6.0.0",
-    "tailwind-merge": "^3.4.0",
     "to-vfile": "^8.0.0",
     "tsx": "^4.21.0",
     "unified": "^11.0.5",
@@ -102,11 +100,5 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.2.7",
-      "@types/react-dom": "19.2.3"
-    }
   }
 }

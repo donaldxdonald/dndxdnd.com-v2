@@ -21,12 +21,12 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
 
   return (
     <AnimatePresence>
-      <motion.section className="flex flex-col gap-4 mt-8 md:mt-16 mb-56 w-full">
+      <motion.section className="group flex flex-col gap-2 mt-8 md:mt-16 mb-56 w-full">
         {
           groupedSortedList.map(([year, sortedList]) => (
-            <div className="mt-3" key={year}>
+            <div className=" group/year" key={year}>
               <h2
-                className="text-3xl md:/text-4xl opacity-80 font-bold tracking-tighter my-5 ml-2 md:ml-5"
+                className="text-2xl md:text-3xl opacity-80 group-hover:opacity-40 group-hover/year:opacity-80 font-bold tracking-tighter my-5 ml-2 md:ml-5"
               >
                 {year}
               </h2>
@@ -38,7 +38,7 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
                     >
                       <Link
                         href={post.url}
-                        className="group px-2 md:px-5 tracking-tight py-1.5 flex justify-between text-sm md:text-base w-full rounded-md text-slate-600/60 hover:text-slate-600 "
+                        className="group/item px-2 md:px-5 tracking-tight py-1.5 flex justify-between text-sm md:text-base w-full rounded-md text-slate-600 group-hover:text-slate-600/30 hover:text-slate-600 "
                         prefetch={false}
                       >
                         <motion.span
@@ -50,7 +50,7 @@ export default function PostList({ list }: { list: (BlogPost | WeeklyPost)[] }) 
                         >
                           { post.data.title }
                         </motion.span>
-                        <span className="text-xs md:text-sm text-gray-400/50 group-hover:text-gray-400 font-mono">{ format(post.data.date, 'yyyy-MM-dd') }</span>
+                        <span className="text-xs md:text-sm text-gray-400 group-hover:text-gray-400/30 group-hover/item:text-gray-400 font-mono">{ format(post.data.date, 'yyyy-MM-dd') }</span>
                       </Link>
                     </motion.li>
                   ))

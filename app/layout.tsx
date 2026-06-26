@@ -1,8 +1,8 @@
 import { Analytics } from '@vercel/analytics/react'
-import cx from 'classnames'
 import { Metadata } from 'next'
 import './globals.css'
 import { ViewTransitions } from 'next-view-transitions'
+import { cn } from '@/lib/utils'
 import { inter, jost, notoSans, notoSerif } from './fonts'
 
 const metaTitle = 'DonaldxDonald'
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: metaDesc,
   },
-  metadataBase: new URL('https://donaldxdonald.xyz'),
+  metadataBase: new URL('https://dndxdnd.com'),
 }
 
 export default async function RootLayout({
@@ -30,7 +30,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(jost.variable, inter.variable, notoSans.variable, notoSerif.variable, 'bg-sky-50')}>
+      <body className={cn(jost.variable, inter.variable, notoSans.variable, notoSerif.variable, 'bg-sky-50')}>
         <main className="flex min-h-screen w-full mx-auto justify-center max-w-4xl text-slate-800 dark:text-slate-300">
           <ViewTransitions>
             {children}
