@@ -1,6 +1,6 @@
 'use client'
 import { format, isBefore } from 'date-fns'
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { AnimatePresence, motion } from 'motion/react'
 import { groupBy } from 'es-toolkit'
 import type { BlogPost, WeeklyPost } from '@/app/source'

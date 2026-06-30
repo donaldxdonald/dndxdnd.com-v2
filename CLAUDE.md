@@ -73,7 +73,7 @@ pnpm prepare                # Setup git hooks (runs automatically)
 - `@vercel/analytics` - Analytics integration
 - `@spotify/web-api-ts-sdk` - Spotify API for listening page
 - `motion` - Animation library
-- `next-view-transitions` - Page transition effects
+- Next.js native View Transitions - Page transition effects
 - `feed` - RSS/Atom/JSON feed generation
 - `sharp` - Image optimization
 
@@ -264,7 +264,7 @@ All routes use the App Router with async Server Components where applicable.
 3. **Metadata**: Generate OpenGraph images via `/og` route with dynamic titles
 4. **Styling**: Use Tailwind classes; custom animations defined in tailwind.config.ts
 5. **MDX Components**: Define custom components in `/components/mdx`
-6. **View Transitions**: Enabled via `next-view-transitions` library
+6. **View Transitions**: Enabled via Next.js native experimental `viewTransition` support
 7. **Package Manager**: Use `pnpm` exclusively (enforced by `engineStrict: true`)
 8. **Node Version**: Requires Node.js >= 22
 

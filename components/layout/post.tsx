@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getMDXComponents } from '../mdx/mdx-components'
 import { PostTitle } from '../PostTitle'
